@@ -6,6 +6,9 @@
 .header{
     min-height: 100vh;
     width: 100%;
+    top:0;
+    left:0;
+    box-sizing: border-box;
     background: radial-gradient( circle at 100%, #3eb8e0, #e03ed3 50%, #eee 20%, #eee 20%);
     background-size: 200% 100%;
     -webkit-animation: bg-animation 30s ;
