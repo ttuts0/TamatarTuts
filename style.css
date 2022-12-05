@@ -6,13 +6,10 @@
 .header{
     min-height: 100vh;
     width: 100%;
-    background-position: center;
-    background: linear-gradient(270deg, #3eb8e0, #e03ed3);
-    background-size: 400% 400%;
-
+    background: radial-gradient( circle at 100%, #3eb8e0, #e03ed3 50%, #eee 20%, #eee 20%);
+    background-size: 200% 100%;
     -webkit-animation: bg-animation 30s ease infinite;
-    -moz-animation: bg-animation 30s ease infinite;
-    animation: bg-animation 30s ease infinite;
+    
 }
 
 @-webkit-keyframes bg-animation{
@@ -20,21 +17,8 @@
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-@-moz-keyframes bg-animation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-o-keyframes bg-animation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes bg-animation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+
+
 
 nav{
     display: flex;
