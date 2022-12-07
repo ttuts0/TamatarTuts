@@ -39,3 +39,8 @@ nav{
     padding: 2px;
     position: relative; 
 }
+
+.parallax{
+    postion: relative;
+    text-align: center;
+}
