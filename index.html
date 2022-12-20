@@ -8,9 +8,10 @@
     </head>
     <body>
         <a href="#" class="logo"><img src="pic2/logo1.png", width="100", height="130"></a>
-        <h1>Welcome to</h1> 
+        <h1 class="welcome">Welcome to</h1> 
+        <div class="animate-scroll"><h2>⌄</h1></div>
         <section class ="first">
-          <h2 class="innerText">Tamatar Tutorials</h2>
+          <h2 class="innerText"><span class="auto-type"></span></h2>
         </section>   
         <section class="container">
           <h2>Crochet Patterns</h2>
@@ -28,19 +29,34 @@
                   <img src="pic2/checkbag.jpg">
                   <h3> Checkered Bag </h3>
               </div>
-              <div class="container-col">
-                <img src="pic2/checkbag.jpg">
-                <h3> Checkered Bag </h3>
             </div>
-              </div>
-            </section>
+        </section>
+        <section class="containerone">
+            <form>
+              <h3>Contact Me</h3>
+              <input type="'text" id="name" placeholder="Your Name" required>
+              <input type="'email" id="email" placeholder="Email id" required>
+              <textarea id="message" rows="4" placeholder="lmk" required></textarea>
+              <button type="submit">send</button>
+            </form>
+        </section>
 
+           
             <script>
               let section =document.querySelector('section');
               window.addEventListener('scroll',function(){
                 let value = window.scrollY;
                 section.style.clipPath="circle("+value+"px at center center)";
-              })
+              });
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+            <script>
+              var typed=new Typed('.auto-type', {
+                  strings: ["Tamatar Tutorials"],
+                  typeSpeed: 200,
+                  backSpeed: 200,
+                  loop: true
+            })
             </script>
       </body>
 </html>

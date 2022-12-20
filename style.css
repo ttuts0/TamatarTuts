@@ -18,18 +18,40 @@ body{
 }
 
 h1{
+    display:flex;
     position: absolute;
-    top:60%;
+    top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    margin-top:-100px;
     color: #fdbb32;
     font-size:3.5em;
-    pointer-events: none;
-
-
-
+    pointer-events: none; 
 }
+.animate-scroll h2{
+    
+    color: #fdbb32;
+    font-size:3em;
+    pointer-events: none;
+    text-align: center;
+    position:relative; top:500px; left:0px; margin-left:0px; margin-right:0px;
+    animation: animate 2s linear infinite;
+}
+
+.animate-scroll{
+    @keyframes amimate {
+        0%{
+            transform-origin: top;
+            transform: scaleY(0);
+        }
+
+        100%{
+            transform-origin: top;
+            transform: scaleY(1);
+        }
+        
+    }
+}
+
 
 .first{
     position: fixed;
@@ -50,7 +72,7 @@ h1{
     transform: translateY(-50%);
     white-space:nowrap;
     z-index:1;
-    font-size:10vw;
+    font-size:6vw;
     color:#e7d3db;
     text-align:center;
     width:100%; 
@@ -61,10 +83,10 @@ h1{
 .container{
     position: relative;
     margin-top: 200vh;
-    background-color: #fdbb32;
+    background-color: #e7d3db;
     text-align: center;
     padding:50px;
-    color: #e7d3db;
+    color: #fdbb32;
     overflow:hidden;
 }
 
@@ -96,6 +118,68 @@ h1{
 
 @media(max-width:700px){
     .flex-container{
-        flex-direction:colomn;
+        flex-direction:column;
     }
+}
+
+.containerone{
+
+    position: relative;
+    margin-top: 0vh;
+    background-color: #fdbb32;
+    padding:125px;
+    color: #e7d3db;
+    font-size:2em;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+form{
+   background-color: #e7d3db;
+   display:flex;
+   flex-direction: column;
+   padding:2vw 4vw;
+   width:90%;
+   max-width: 600px;
+   border-radius: 50px;
+}
+
+form h3{
+    color:#fdbb32;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+form input, textarea{
+    display:flex;
+   border:0;
+   margin: 10px 0px;
+   padding: 20px;
+   outline: none;
+   background-color: #e7d3db;
+   font-size: 16px;
+   resize:none;
+
+}
+input, form textarea:-webkit-autofill{
+    -webkit-text-fill-color: #fdbb32 !important;
+}
+
+form button{
+    padding:15px;
+    background: #e7d3db;
+    color: #fdbb32;
+    font-weight:bold;
+    font-size: 18px;
+    border:0;
+    outline: none;
+    cursor: pointer;
+    width:150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
 }
