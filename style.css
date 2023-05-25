@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -20,8 +21,8 @@ nav{
     list-style-type:none;
     position: fixed;
     width: 100vw;
-    top: 0;
-    padding: 9px;
+    top: 10;
+    padding: 20px;
     background-color: #e7d3db;
     z-index: 300;
     
@@ -30,7 +31,7 @@ nav{
 
 
   li{
-    width: 100px;
+    width: 90px;
 
   }
   
@@ -42,10 +43,17 @@ nav{
     transition: .3s;
     
   }
-  a:hover,
-  a.active{
+  
+  a:hover
+  {
     color:#fdbb32;
   }
+
+  a:active{
+    text-decoration: none;
+    color:#fdbb32;
+}
+
 
   .logo{
     text-align: left;
@@ -225,3 +233,53 @@ form button{
     border-radius: 30px;
 }
 
+.welcome {
+    font-size: 7vw;
+}
+
+
+.ListNav {
+    display: block;
+}
+
+
+.HamburgerNav {
+    display: none;
+    right: 30px;
+    position: absolute;
+    top: 0px;
+}
+
+.HamburgerMenu {
+    display: none;
+    position: fixed;
+    right: 0px;
+    top: 25px;
+    z-index: 99;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: #f0ba4b;
+    margin-top: 10px;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+}
+
+.HamburgerMenu a {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 910px) {
+    .HamburgerNav {
+        display: block;
+    }
+    .ListNav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 910px) {
+    .HamburgerMenu {
+        visibility: hidden;
+    }
+}
